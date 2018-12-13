@@ -1,0 +1,585 @@
+<header>
+<h1 class="glow">Beta Club </h1></header>
+<body text=e6b800>
+<!DOCTYPE html>
+<html>
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.tablink {
+    position: relative;
+    background-color: black;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+ -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer; }
+.tablink:after {
+    content: "";
+    background: #ABA424;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s }
+.tablink:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s }
+  h1, h2, h3, h4, h5, h6, body, header, p, li, text  {
+    voice-family: male;
+    richness: 80;
+    cue-before: url("beep.au");
+    speech-rate: slow;
+    volume: medium}
+.glow {
+  font-family: monotype corsiva;
+  font-size: 80px;
+  color: gold;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;}
+@-webkit-keyframes glow {
+  from {
+     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px grey, 0 0 40px grey, 0 0 50px grey, 0 0 60px gold, 0 0 70px gold;}
+to { text-shadow: 0 0 20px #fff, 0 0 30px #1E7A77, 0 0 40px #1E7A77, 0 0 50px #1E7A77, 0 0 60px #59519D, 0 0 70px #59519D, 0 0 80px #59519D;}}
+#div { 
+  color: gold;}
+body { 
+  background-color: black;}
+header { 
+  text-align: center;}
+center { 
+  width: 280px; 
+  margin: 0 auto;       
+  text-align: left;}
+* { box-sizing: border-box;}
+/* Set height of body and the document to 100% */
+body, html { 
+  height: 89%; 
+  margin: 0;          
+  font-size: 25px;}
+/* Style tab links */
+.tablink { 
+  background-color: black;        
+  color: white; 
+  float: left; 
+  border: none; 
+  outline: none; 
+  cursor: pointer;          
+  padding: 14px 16px; 
+  font-size: 25px;      
+  width: 16.64%;}
+.tablink:hover { background-color: #03edfa;}
+.tablink:hover { color: #010707;}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent { 
+  color: white; 
+  display: none; 
+  padding: 100px 20px; 
+  height: 128%;}
+#Homepage { background-color: black;}
+#About { 
+  background-color: black; 
+  color: grey;}
+#HowToJoin { 
+  background-color: black;      
+  color: gold;}
+h3 { color: #414647;}
+#Contact { background-color: black;}
+#Fundraiser { background-color: black;}
+#Activities { 
+  background-color: black;     
+  color: gold;}
+<style> * { 
+  box-sizing: border-box;
+{ text-align: left;}}
+ol { 
+  list-style: decimal; 
+  padding-left: 40px;}
+* { box-sizing: border-box;}
+/* Slideshow container */
+.slideshow-container { 
+  max-width: 500px; 
+  position: relative; 
+  margin: auto;}
+/* Hide the images by default */
+.mySlides { display: none;}
+/* Next & previous buttons */
+.prev, .next { 
+  cursor: pointer;         
+  position: absolute; 
+  top: 50%; 
+  width: auto; 
+  margin-top: -22px; 
+  padding: 16px; 
+  color: white; 
+  font-weight: bold; 
+  font-size: 18px;   
+  transition: 0.6s ease;                     border-radius: 0 3px 3px 0;}
+/* Position the "next button" to the right */
+.next { 
+  right: 0; 
+  border-radius: 3px 0 0 3px;}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {             background-color: rgba(0, 0, 0, 0.8);}
+/* Caption text */
+.text { 
+  color: #f2f2f2; 
+  font-size: 17px; 
+  padding: 8px 12px; 
+  position: absolute;    
+  bottom: 8px; width: 100%; 
+  text-align: center; 
+  background-color: black; 
+  opacity: 0.7;}
+/* Number text (1/5 etc) */
+.numbertext { 
+  color: #f2f2f2; 
+  font-size: 12px; 
+  padding: 8px 12px; 
+  position: absolute;
+  top: 0;}
+/* The dots/bullets/indicators */
+.dot { 
+  cursor: pointer; 
+  height: 15px;      
+  width: 15px; 
+  margin: 0 2px;            
+  background-color: #bbb;
+  border-radius: 50%; 
+  display: inline-block;                 transition: background-color 0.6s ease;}
+.active, .dot:hover { background-color: #717171;}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;}
+@-webkit-keyframes fade {
+from {
+  opacity: 0.4;}
+to {
+  opacity: 1;}}
+@keyframes fade {
+from {
+  opacity: 0.4;}
+to {
+  opacity: 1;}}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 0px solid #f1f1f1;
+  perspective: 1000px;}
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;}
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);}
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;}
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: black;
+  color: black;}
+/* Style the back side */
+.flip-card-back {
+  background-color: black;
+  color: gold;
+  transform: rotateY(180deg);
+  font-size: 19px;}
+#long{ width: 490px;}
+body { font-family: Arial; }
+.menu {
+  font-size: 18px;
+  background-color: black;
+  /*don't edit after this line*/
+  display: flex;
+  margin: 0;
+  padding: 0;
+  /*colors first 4 levels*/
+  /*border radius*/
+  border-radius: 6px; }
+.menu ul {
+  margin: 0;
+  padding: 0; }
+.menu a {
+  position: relative;
+  white-space: nowrap;
+  display: block;
+  padding: 0.5em 1em;
+  background-color: black;
+  color: white;
+  text-decoration: none; }
+.menu a:after {
+  width: 1em;
+  display: block;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  text-align: right; }
+.menu a:not(:last-child) {
+  padding-right: 1.6em; }
+.menu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+.menu > li { float: left; }
+.menu > li ul {
+  position: absolute;
+  visibility: hidden;
+  min-width: 100%; }
+.menu > li:hover > ul {
+  visibility: visible;
+  left: 0; }
+.menu > li li:hover > ul {
+  visibility: visible;
+  left: 100%;
+  top: 0; }
+.menu > li a:not(:last-child):after {
+  content: "\25BE"; }
+.menu > li li a:not(:last-child):after {
+  content: "\25B8"; }
+.menu > li:hover > a, .menu > li:hover li a {
+  background-color: #ccad00; }
+.menu > li li:hover > a, .menu > li li:hover li a {
+  background-color: 00FFFF; }
+.menu > li li li:hover > a, .menu > li li li:hover li a {
+  background-color: black; }
+.menu > li li li li:hover > a, .menu > li li li li:hover li a {
+  background-color: #c5c5c5; }
+.menu li ul {
+  border-radius: 6px;
+  border-top-left-radius: 0; }
+.menu, .menu li ul {
+  box-shadow: 1px 1px 1px #bbb; }
+.menu > li:first-child > a {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px; }
+.menu > li:first-child:hover > a {
+  border-bottom-left-radius: 0; }
+.menu ul li:last-child:not(:only-child) > a {
+  border-bottom-left-radius: 6px; }
+.menu ul li:last-child:not(:hover) > a, .menu ul li:last-child > a:last-child {
+  border-bottom-right-radius: 6px; }
+.menu ul li li:first-child:not(:hover) > a, .menu ul li li:first-child:hover > a:last-child {
+  border-top-right-radius: 6px; }
+  </style>
+ <button class="tablink" onclick="openPage('Homepage', this, '')">Homepage</button>
+<button class="tablink" onclick="openPage ('About', this, '')">About</button>
+<button class="tablink" onclick="openPage('HowToJoin', this, '')">How To Join</button>
+<button class="tablink" onclick="openPage('Benefits', this, '')">Benefits</button>
+<button class="tablink" onclick="openPage('Fundraiser', this, '')">Fundraiser </button>
+<button class="tablink" onclick="openPage('Activities', this,'')">Activities </button>
+<div id="Homepage" class="tabcontent">
+<h1>
+<header> Better Education Through Achievement!
+<img src="https://www.betaclub.org/themes/site_themes/beta_club/img/betaclublogo.svg" alt align=center width=225>
+<p>
+<img src="https://lucielink.stlucie.k12.fl.us/wp-content/uploads/2016/12/Beta-Club-Convention-1-625x469.jpg" alt="BetaclubMembers" align=center width=405></header></h1>
+<center>
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img src="https://www.betaclub.org/themes/site_themes/beta_club/img/betaclublogo.svg" alt="Beta club Symbol " style="width:200px;height:200px;"></div>
+<div class="flip-card-back">
+<h1>Beta Club</h1>
+<h3>
+<p>Educational & Exciting.</p>
+<p>Club that is enjoyed around the world.</p></div></div></div>
+<h3>
+<div class="slideshow-container">
+<div class="mySlides fade">
+<div class="numbertext">1 / 5</div>
+<center>
+<img src="http://chs.rcsnc.org/UserFiles/Servers/Server_4734986/Image/Clatanoff%20Sandy/beta2013.jpg" height=350 width=350></center>
+<div class="text"></div></div>
+<div class="mySlides fade">
+<div class="numbertext">2 / 5</div>
+<center>
+<img src="http://www.dekalbschoolsga.org/wp-content/uploads/2018/07/kittredge-beta-1.jpg" height=350 width=350></center>
+<div class="text"></div></div>
+<div class="mySlides fade">
+<div class="numbertext">3 / 5</div>
+<center>
+<img src="http://www.hippoquotes.com/img/being-yourself-quotes-pinterest/be-yourself-6.jpg" height=350 width=350></center>
+<div class="text"></div></div>
+<div class="mySlides fade">
+<div class="numbertext">4 / 5</div>
+<center>
+<img src="https://jesselectricexperience.files.wordpress.com/2012/07/logo2.jpg" alt="Picture of Beta Club" height=350 width=350></center>
+<div class="text"></div></div>
+<div class="mySlides fade">
+<div class="numbertext">5 / 5</div>
+<center>
+<img src="http://www.westalabamawatchman.com/wp-content/uploads/2015/09/V__5F721.jpg" height=350 width=350></center>
+<div class="text"></div></div>
+<!-- Next and previous buttons -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a></div><br>
+<!-- The dots/circles -->
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+<span class="dot" onclick="currentSlide(4)"></span>
+<span class="dot" onclick="currentSlide(5)"></span></div></center>
+<div id=div>"Hello welcome to our website , we hope you enjoy!"- Coders & Leaders of Beta Club.</div>
+<p> The Beta Club Motto-"Let Us Lead By Serving Others"
+<p> Mission statment: " The purpose of the National Beta Club shall be to premote ideals of character, service, leadership, to reward meritorious academic achievment to encourage and assist students in continuing their education after high school."
+<p> For more information, visit the official website. 
+<a href="https://www.betaclub.org/">Beta club homepage</a></p></div>
+<div id="About" class="tabcontent"> </h4></body></html>
+<h3>About Beta Club</h3>
+<h4>Beta Club is a club around the world that...</h4>
+<h4>It's for everyone, expecialy those who'd like to become leaders. Between Divisions I and II of Junior Beta (grades 4-8) and Senior Beta (grades 9-12), the organization has helped nearly seven million students learn how to make a life for themselves—and,since 1991, it has awarded over $6 million in scholarships.</h4>
+<h4>It has since done many things including fundraisers, going to the National Beta Club Convention, and more.</h4>
+<h3>The Beta Club Pledge</h3>
+<h4>As a Senior Beta,</h4>
+<h4>I solemnly declare</h4>
+<h4>That I shall always strive</h4>
+<h4>To hold fast to the principals of honesty</h4>
+<h4>To endeavor constantly to maintain a creditable record;</h4>
+<h4>To cultivate in my life and conduct the principals</h4>
+<h4>Of morality, service, and leadership.</h4>
+<h4>I further pledge myself</h4>
+<h4>To cooperate with the members of The National Beta Club</h4>
+<h4>In the promotion of a sense of individual responsibility</h4>
+<h4>To our school, community, state, and nation</h4>
+<h4>To make right the master of might;</h4>
+<h4>And to consecrate our comradeship to mutual helpfulness</h4>
+<h4>And to the betterment of our fellow students.</h4>
+<script type="text/javascript">
+    var phplive_v = new Object;
+    phplive_v["ClubId"] = '';
+    phplive_v["UserName"] = '';
+    phplive_v["name"] = '';
+    phplive_v["email"] = '';
+    //-->
+    function request(url, params) {
+      var request = new XMLHttpRequest();
+      params = params + "&rand=" + Math.floor(Math.random() * 1000000);
+      request.open("POST", url, false);
+      request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      request.setRequestHeader("Content-length", params.length);
+      request.setRequestHeader("Connection", "close");
+      request.setRequestHeader("User-Agent", navigator.userAgent);
+      request.send(params);
+      if (request.status == 200)
+        return request.responseText;
+    }
+</script>
+<div class="article--gray" name="Sponsors Resource Guide">
+<style>
+      .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+      }
+      .embed-container iframe,
+      .embed-container object,
+      .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+</style>
+<div class='embed-container' data-page-width='495' data-page-height='640' id='embed-container'><iframe src="https://www.yumpu.com/en/embed/view/vhaHOcuWnXGl0dM6" frameborder="0" allowfullscreen="true" allowtransparency="true"></iframe></div>
+<script src='//www.yumpu.com/assets/v4/js/modules/embed/yp_r_iframe.js'></script></div></div></div>
+<div id="HowToJoin" class="tabcontent">
+<ul>
+<h4>
+<li>General</li>
+  Sign the list by the deadline.<br>
+Have grades that are above or equal to a 93, for two consecutive semesters.
+  <li>REVIEW OUR ELIGIBILITY REQUIREMENTS</li>
+You should familiarize yourself with Beta’s eligibility requirements.
+  <li>DETERMINE YOUR SCHOOL’S CRITERIA</li>
+Determine your school’s specific criteria for membership and be sure that your school is properly accredited, if required.</h4></ul></header>
+  </div>
+<div id="Benefits" class="tabcontent"> Some Benefits of BETA members are the folowing:<ul class="menu">
+<li><a href="#">Future</a>
+<ul>
+<li><a href="#">Scholorships</a>
+<ul>
+<li><a href="#">General for any school.</a>
+<ul>
+<li><a href="#">Grants</a></li>
+
+</ul>
+</li>
+<li><a href="#">Specific Schools.</a></li>
+</ul>
+</li>
+<li><a href="#">Friends</a>
+<ul>
+<li><a href="#">Increases social skills</a>
+<ul>
+<li><a href="#">Relationships</a></li>
+</ul>
+</li>
+<li><a href="#">Keeps you active in the community</a></li>
+</ul>
+</li>
+<li class="separator"></li>
+<li><a href="#">Leadership Skills</a></li>
+</ul>
+</li>
+<li><a href="#">Present</a>
+<ul>
+<li><a href="#">Experience</a></li>
+<li><a href="#">Friends</a></li>
+<li><a href="#"></a></li>
+</ul>
+</li>
+
+</ul>
+
+
+
+</div>
+<div id="Fundraiser" class="tabcontent">
+   <center>
+ <text><h2>Tumblers- $12.50(Basic)<br>Colors-<br>Black<br>Blue +$1.00<br>Red +$1.00<br>Tumbler Size-<br>20oz<br>30oz +$2.50</h2></text>
+     <img src="https://i.pinimg.com/736x/97/a7/db/97a7dbe2e6e6aad6e9b93f45766bd4e3--tumbler-with-straw-acrylic-tumblers.jpg" alt="Picture of Fundraising Tumbler" width=200></center>
+  </center>
+
+</div>
+<div id="Activities" class="tabcontent">
+<center>
+  <img class="mySlides2" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/46736134_1941799639236385_6630074245273616384_n.jpg?_nc_cat=102&_nc_ht=scontent-atl3-1.xx&oh=7255b3a907ad773b73623dbf42c51a3e&oe=5C74F529" width=300>
+<img class="mySlides2" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/46883796_1941799775903038_8533134358180003840_n.jpg?_nc_cat=110&_nc_ht=scontent-atl3-1.xx&oh=23ed9e09ac2f32e60c01e1bec68fb5a7&oe=5C65A351" width=300>
+  <img class="mySlides2" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/46803641_1943056165777399_762030380604719104_n.jpg?_nc_cat=110&_nc_ht=scontent-atl3-1.xx&oh=de93a3919a781dfb80bbb1847e7c3d06&oe=5C6D65D2" width=300>
+  <img class="mySlides2" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/46837203_1943056355777380_1599749994909270016_n.jpg?_nc_cat=103&_nc_ht=scontent-atl3-1.xx&oh=6bcf1b8059ba18381c1044a9089e64b9&oe=5CA7B237" width=300>
+  <img class="mySlides2" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/46804879_1943056509110698_9054312361623552000_n.jpg?_nc_cat=110&_nc_ht=scontent-atl3-1.xx&oh=5fe6861d0a55b283b8fb5fab2c1a1b34&oe=5C711987" width=300>
+  </center>
+ 
+      <script>
+         var slideIndex2 = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex2++;
+    if (slideIndex2 > x.length) {slideIndex2 = 1} 
+    x[slideIndex2-1].style.display = "block"; 
+    setTimeout(carousel, 5000);}
+      </script>
+  <script>function openPage(pageName, elmnt, color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+  tabcontent[i].style.display = "none";}
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+  tablinks[i].style.backgroundColor = "";}
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+var slideIndex = 1;
+showSlides(slideIndex);
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));}
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));}
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+if (n > slides.length) {
+    slideIndex = 1;}
+if (n < 1) {
+    slideIndex = slides.length;}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");}
+slides[slideIndex - 1].style.display = "block";
+dots[slideIndex - 1].className += " active";}</script>
+<center>
+<h3 color=#585858>
+<h3>Beta Convention</h3>
+<ul>
+<li><h5>Thursday, November 15</h5></li></ul>
+<ol>
+<h6>
+<li>Check into Hotel</li>
+<li>Practice Skit</li>
+<li>Campaign for Office</li>
+<li>Attend general Session</li>
+<li>Perform Campeign Skit</li>
+<li>Office canadite will deliver speech</li>
+<li>Listen to Keynote speaker</li></h6></ol>
+<ul>
+<h5>
+<li>Friday, November 16</li></h5></ul>
+<ol>
+<h6>
+<li>Compete in various Academic Competitions</li>
+<ol>
+<li>Algebra 1,2</li>
+<li>Geometry</li>
+<li>Calculus</li>
+<li>English 1,2,3,4</li>
+<li>General Science</li>
+<li>Biology</li>
+<li>Chemistry</li>
+<li>American History</li>
+<li>Economic & Government</li>
+<li>Spanish 1,2</li>
+<li>Animal Science, Planet Science, Ag-Business</li>
+<li>Spelling</li>
+<li>Character Skit</li>
+<li>Large Group Talent</li>
+<li>Art-Colored Pencil, Pencil Drawing, Acrylic Painting</li>
+<li>Creative Writing</li>
+<li>Beta Build</li>
+<li>Campaign for State Office</li></ol>
+<li>Attend General Session</li>
+<ol>
+<li>Talent Finalist will Perform</li>
+<li>Listen to Keynote Speaker</li>
+<li>Vote of state Officers</li></h6></ol>
+<h5><li>Saturday, November 17</li></h5>
+<h6><li>Attend General Sessions</li>
+<ol>
+<li>Listen to Keynote Speaker</li>
+<li>Installation of new officers</li>
+<li>Presentation of awards</li>
+</ol></h6></center></select></body>
+  <center><h3>The Giving Tree</h3></center>
+  <center> <h2>  The Giving Tree is a event where you take a card from an x-mas tree at Food Rite and get what is on it. The gift goes to a child in need.  </h2></center>
+  <center> <h3>Christmas Cards</h3> </center>
+  <center> <h2> These are christmas pictures drawn to give to children who don't get much.  </h2></center>
+</div>
